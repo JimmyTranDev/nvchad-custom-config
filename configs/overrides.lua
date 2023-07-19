@@ -40,7 +40,9 @@ M.mason = {
     "clang-format",
 
     -- backend stuff
-    "gopls"
+    "gopls",
+    "golangci_lint_ls",
+
   },
 }
 
@@ -67,6 +69,11 @@ M.copilot = {
   suggestion = {
     auto_trigger = true,
   },
+}
+
+-- TODO: Check why not workiong
+M.nvdash = {
+  load_on_startup = true,
 }
 
 return M
