@@ -47,6 +47,7 @@ local plugins = {
     end,
   },
 
+  -- Github copilot lua
   {
     "zbirenbaum/copilot.lua",
     -- Lazy load when event occurs. Events are triggered
@@ -58,6 +59,18 @@ local plugins = {
     -- lazy = false,
     opts = overrides.copilot,
   },
+
+  -- nvim surround 
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+  }
 
   -- To make a plugin not be loaded
   -- {
